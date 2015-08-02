@@ -4,6 +4,20 @@
     <title>Natac's Blog</title>
 </head>
 <body>
-<p>Hi there checking if works?</p>
+
+<header>
+    <h1>Natac's Blog</h1>
+</header><!-- /header -->
+
+{% for post in posts %}
+<div class="blog">
+    <header>
+        <h2><a href="#">{{ post.title }}</a></h2>
+    </header><!-- /header -->
+    <p>published:  {{ post.published_date }}</p>
+    <p>{{ post.text|linebreaks }}</p>
+</div>
+
+{% endfor %}
 </body>
 </html>
